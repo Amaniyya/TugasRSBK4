@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+    <title>Daftar Mahasiswa Tekkom</title>
+</h:head>
+    
+  <h:body>
+   <center>
+   <h:form>
+    <h1>Edit Data Dosen</h1>
+    
+     <table>
+            <tr>
+               <td>ID Dosen : </td>
+               <td><h:inputText value="#{EditDosen.DOSEN}" required="true" requiredMessage="masukkan ID Dosen" ></h:inputText></td>
+            </tr>
+            <tr>
+               <td>Nama :</td>
+               <td><h:inputText value="#{EditDosen.NAMA_DOSEN}" required="true" requiredMessage="masukkan Nama"></h:inputText></td>
+            </tr>
+            <tr>
+               <td>No Telepon :</td>
+               <td><h:inputText value="#{EditDosen.TLP_DOSEN}" required="true" requiredMessage="Masukkan No Telepon"></h:inputText></td>
+            </tr>
+            
+     </table>
+    <br></br>
+    <h:commandButton value="Update" action="#{EditDosen.Update_Dosen}">
+     <f:param name="Update_NIM" value="#{EditDosen.DOSEN}" /></h:commandButton>
+    <br></br>
+    <br></br>
+    </h:form>
+       <h:form>
+                   <h:commandButton value="Kembali" action="index.xhtml"></h:commandButton>
+       </h:form>
+       
+  </center>
+</h:body>
+</html>
